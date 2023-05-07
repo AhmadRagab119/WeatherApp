@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Jomhuria&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lobster&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Qwitcher+Grypen:wght@400;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.project {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #2196f3;
+}
+.container{
+    margin: 150px auto;
+    width: 400px;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 30%);
+    border-radius: 7px;
+}
+.container.active .input-part {
+display: none;
+}
+.container.active .weather-part ,
+.container.active header i.back
+{
+    display: block;
+}
+
+header {
+    padding:  0 20px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 40px);
+    height: 60px;
+    border-bottom: 1px solid #eee;
+    color: #0d8aed;
+}
+header .title {
+font-size: 22px;
+margin-left: 10px;
+}
+header i.back {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.input-part {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.input-part .add-city {
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline-color: #0d8aed;
+    border-radius: 7px;
+}
+.input-part .get-location {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color: #0d8aed;
+    color: white;
+    border-radius: 7px;
+    width: 89%;
+    height: 40px;
+    margin:  0 auto;
+    margin-top: 50px;
+    position: relative;
+    cursor: pointer;
+}
+.input-part .get-location::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color:grey;
+    position: absolute;
+    top:  -25px;
+    left: 0;
+    z-index: 100;
+}
+.input-part .get-location::after {
+    content: "or";
+    position: absolute;
+    top:  -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: grey;
+    width: 40px;
+    height: 30px;
+    z-index: 100;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* weather part */
+
+.weather-part {
+    text-align: center;
+    display: none;
+}
+
+.weather-part img {
+    display: flex;
+    width: 120px;
+    margin: 20px auto;
+}
+.weather-part .temp {
+ display: flex;
+justify-content: center;
+align-items: center;
+font-size: 70px;
+font-weight: 900;
+}
+.weather-part .temp .deg {
+    display: block;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.weather-part .wather {
+    margin: 20px 0;
+    font-size: 22px;
+}
+.weather-part .location {
+    font-size: 20px;
+}
+.weather-part .bootom-detailes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 15px;
+
+}
+.weather-part .bootom-detailes .column-feels {
+    border-right: 1px solid #ccc;
+}
+.weather-part .bootom-detailes .column-feels ,
+.weather-part .bootom-detailes .column-humidity
+ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #ccc;
+     width: 100%;
+     padding: 10px;
+}
+.weather-part .bootom-detailes .column-feels i ,
+.weather-part .bootom-detailes .column-humidity i
+
+{
+    margin-right:15px ;
+    font-size: 30px;
+    color: #0d8aed;
+}
+.weather-part .bootom-detailes .temp  {
+    font-size: 20px;
+    font-weight: normal;
+}
+.weather-part .bootom-detailes .detailes .temp .deg {
+font-weight: normal;
+font-size: 20px;
+margin-bottom: 0;
+}
+
+@media (min-width:300px) and (max-width:767px) {
+    .container{
+        margin: 50px auto;
+        width: 300px;
+        height: fit-content;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 30%);
+        border-radius: 7px;
+    }
+}
